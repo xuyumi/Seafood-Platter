@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
+
+body {
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(24, 24, 24);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+}
+
+h2 {
+  text-align: center;
+  color: lightgray;
+}
+
+.seeAllPage {
+    margin: 25px;
+    overflow-y:auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-rows: 1fr;
+}
+
+.grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.grid>*:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+#searchResultsPage {
+  z-index: 5;
+  background-color: white;
+  height:100%;
+  width:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+#homeAndSearchContainer {
+  position: relative;
+  
+}
+
+#loadContainer {
+  z-index: 5;
+  background-color: rgb(24, 24, 24), 0.2;
+  height:100%;
+  width:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top:50%;
+  left:55%;
+  margin:auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid lightskyblue;
+  border-color: lightskyblue transparent lightskyblue transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
